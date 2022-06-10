@@ -72,7 +72,7 @@ public class storeApiTest {
     }
     @Test
     public void deleteStoreOrderId(){
-        String id = "4637282031";
+        String id = "9223372036854025975";
         Response response = StoreApi.deleteStoreOrderId(id);
 
         StoreOut actual = response.then()
@@ -85,7 +85,7 @@ public class storeApiTest {
 
         StoreOut expected = StoreOut.builder()
                 .code(200)
-                .message("4637282031")
+                .message(id)
                 .type("unknown")
                 .build();
 
